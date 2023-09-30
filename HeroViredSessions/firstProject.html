@@ -53,7 +53,81 @@
     </script>
 </head>
 <body>
-    <!-- Your page content goes here -->
-    Hello Neeraj!
+    <!-- Header Section -->
+    <header>
+        <h1>First HTML Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Text-Based Elements -->
+        <section id="section1">
+            <h2>Subheading 1</h2>
+            <p>This is a paragraph.</p>
+            <blockquote cite="source">
+                This is a blockquote.
+            </blockquote>
+            <pre>
+                Preformatted text
+            </pre>
+            <code>
+                Inline code snippet
+            </code>
+        </section>
+
+        <!-- List Elements -->
+        <section id="section2">
+            <h2>Subheading 2</h2>
+            <ul>
+                <li>Unordered List Item 1</li>
+                <li>Unordered List Item 2</li>
+            </ul>
+            <ol>
+                <li>Ordered List Item 1</li>
+                <li>Ordered List Item 2</li>
+            </ol>
+        </section>
+
+        <!-- Table Element -->
+        <section id="section3">
+            <h2>Subheading 3</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Form Elements -->
+        <form action="#" method="post">
+            <label for="text-input">Text Input:</label>
+            <input id="text-input" type="text" name="text-input">
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Copyright © 2023</p>
+    </footer>
+
+    <!-- JavaScript just before closing body for performance -->
+    <script src="script.js"></script>
 </body>
 </html>

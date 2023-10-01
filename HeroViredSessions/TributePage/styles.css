@@ -1,0 +1,54 @@
+/* Styling the body element */
+body {
+    background-color: #00FA9A;
+    margin: 20%;
+}
+
+/* Styling the Title */
+#title {
+    text-align: center;
+    text-shadow: 5px 5px 10px white;
+    font-size: 7vh;
+}
+
+/* Setting image width and display type */
+img {
+    display: inline-block;
+    width: 100%;
+}
+
+/* Styling the caption */
+#caption {
+    font-size: 17px;
+    font-family: Gill Sans;
+    color: black;
+}
+
+/* Styling the content */
+div#tribute-data {
+    background-color: rgba(46, 139, 87, 0.25);
+    box-shadow: 20px 20px 20px #98FB98;
+    font-family: Georgia;
+    padding: 25px;
+    margin: 11px;
+    margin-top: 50px;
+}
+
+/* Styling the subtitle */
+h1.title-APJ {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    text-shadow: 5px 5px 10px black;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Adding hover effect on links */
+#tribute-link:hover, #developer-link:hover {
+    text-decoration: underline;
+}

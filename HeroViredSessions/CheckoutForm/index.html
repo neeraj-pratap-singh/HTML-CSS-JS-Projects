@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <form action="process_order.php" method="post">
+            <fieldset class="section">
+                <legend>Delivery Address</legend>
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="zipcode">Zip Code:</label>
+                    <input type="text" id="zipcode" name="zipcode" required>
+                </div>
+            </fieldset>
+
+            <div class="section">
+                <h2>Payment Information</h2>
+                <div class="form-group">
+                    <label for="cardtype">Card Type:</label>
+                    <select id="cardtype" name="cardtype" required>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+                        <option value="amex">American Express</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cardnumber">Card Number:</label>
+                    <input type="text" id="cardnumber" name="cardnumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="expdate">Expiration Date:</label>
+                    <input type="text" id="expdate" name="expdate" placeholder="MM/YYYY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Additional Options</h2>
+                <div class="form-group">
+                    <label>Subscribe to our newsletter:</label>
+                    <input type="radio" name="newsletter" value="yes" checked> Yes
+                    <input type="radio" name="newsletter" value="no"> No
+                </div>
+                <div class="form-group">
+                    <label>Shipping Method:</label>
+                    <input type="radio" name="shipping" value="standard"> Standard Shipping ($5.00)
+                    <input type="radio" name="shipping" value="express"> Express Shipping ($10.00)
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>

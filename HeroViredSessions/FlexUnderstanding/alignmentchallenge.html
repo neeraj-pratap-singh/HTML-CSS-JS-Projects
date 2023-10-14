@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Brick Structure</title>
+  <style>
+    /* Container for each row */
+    .row {
+      display: flex;
+      justify-content: space-between;  /* Distribute bricks evenly */
+      width: 100%;  /* Full width */
+    }
+
+    /* General brick styling */
+    .brick {
+      background-color: rgb(11, 172, 201); /* Lime blue color */
+      color: white;
+      text-align: left;
+      position: relative;
+      flex-grow: 1;  /* Each brick will grow to fill space */
+      margin: 2px;
+    }
+
+    /* Number styling */
+    .brick .number {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      font-size: 30px;  /* Increased text size */
+    }
+
+    /* First row brick styling */
+    .row1 .brick {
+      height: 150px;  /* Adjusted height */
+    }
+
+    /* Second row brick styling */
+    .row2 .brick {
+      height: 40px;  /* Adjusted height */
+    }
+
+    /* Third row brick styling */
+    .row3 .brick {
+      height: 40px;  /* Adjusted height */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- First row -->
+  <div class="row row1">
+    <div class="brick"><span class="number">1</span></div>
+    <div class="brick"><span class="number">2</span></div>
+    <div class="brick"><span class="number">3</span></div>
+  </div>
+
+  <!-- Second row -->
+  <div class="row row2">
+    <div class="brick"><span class="number">1</span></div>
+    <div class="brick"><span class="number">2</span></div>
+    <div class="brick"><span class="number">3</span></div>
+    <div class="brick"><span class="number">4</span></div>
+  </div>
+
+  <!-- Third row -->
+  <div class="row row3">
+    <div class="brick"><span class="number">1</span></div>
+    <div class="brick"><span class="number">2</span></div>
+    <div class="brick"><span class="number">3</span></div>
+    <div class="brick"><span class="number">4</span></div>
+    <div class="brick"><span class="number">5</span></div>
+  </div>
+
+</body>
+</html>

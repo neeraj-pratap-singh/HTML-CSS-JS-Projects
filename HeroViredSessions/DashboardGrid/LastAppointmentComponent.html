@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Last Appointments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* Header styling */
+        header {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bolder;
+        }
+
+        /* Grid-based "table" styling */
+        .grid-table {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .grid-header, .grid-row {
+            display: contents;
+        }
+
+        .grid-cell {
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .grid-header .grid-cell {
+            font-weight: bold;
+            background-color: #f1f1f1;
+        }
+
+        .grid-row .grid-cell:hover {
+            background-color: #b3ebd6;
+        }
+
+        /* Action icons */
+        .action-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-icons i {
+            cursor: pointer;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .fa-eye {
+            background-color: green;
+        }
+
+        .fa-pencil {
+            background-color: blue;
+        }
+
+        .fa-trash {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>Last Appointments</header>
+
+        <div class="grid-table">
+
+            <!-- Table Header -->
+            <div class="grid-header">
+                <div class="grid-cell">Name</div>
+                <div class="grid-cell">Doctor</div>
+                <div class="grid-cell">Condition</div>
+                <div class="grid-cell">Action</div>
+            </div>
+
+            <!-- Table Rows -->
+            <div class="grid-row">
+                <div class="grid-cell">Mr. Ajay</div>
+                <div class="grid-cell">Dr. Neeraj</div>
+                <div class="grid-cell">Fever</div>
+                <div class="grid-cell">
+                    <div class="action-icons">
+                        <i class="fa fa-eye"></i>
+                        <i class="fa fa-pencil"></i>
+                        <i class="fa fa-trash"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Rows -->
+            <div class="grid-row">
+                <div class="grid-cell">Mr. Amol</div>
+                <div class="grid-cell">Dr. Urvashi</div>
+                <div class="grid-cell">Eye irritation</div>
+                <div class="grid-cell">
+                    <div class="action-icons">
+                        <i class="fa fa-eye"></i>
+                        <i class="fa fa-pencil"></i>
+                        <i class="fa fa-trash"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Rows -->
+            <div class="grid-row">
+                <div class="grid-cell">Mr. Sohail</div>
+                <div class="grid-cell">Dr. Sunita</div>
+                <div class="grid-cell">back Pain</div>
+                <div class="grid-cell">
+                    <div class="action-icons">
+                        <i class="fa fa-eye"></i>
+                        <i class="fa fa-pencil"></i>
+                        <i class="fa fa-trash"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Rows -->
+            <div class="grid-row">
+                <div class="grid-cell">Mr. Vaibhav</div>
+                <div class="grid-cell">Dr. Shakul</div>
+                <div class="grid-cell">Cold & Cough</div>
+                <div class="grid-cell">
+                    <div class="action-icons">
+                        <i class="fa fa-eye"></i>
+                        <i class="fa fa-pencil"></i>
+                        <i class="fa fa-trash"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

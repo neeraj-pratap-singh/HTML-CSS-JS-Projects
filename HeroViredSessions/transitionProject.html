@@ -8,12 +8,16 @@
         .my-button {
             background-color: blue;
             color: white;
-            padding: 10px 20px;
+            width: 60px;  /* Fixed width */
+            height: 60px;  /* Fixed height */
             font-size: 16px;
+            line-height: 60px;  /* Align text vertically */
+            text-align: center;  /* Align text horizontally */
             border: none;
             cursor: pointer;
-            transition: all 0.5s ease;  /* Transition */
+            transition: all 3s ease;  /* Transition duration updated to 3s */
             transform: scale(1);  /* Initial scale */
+            border-radius: 0%;  /* Start as a square */
         }
 
         /* Styles to apply when the button is focused */
@@ -21,9 +25,11 @@
             background-color: red;
             color: yellow;
             font-size: 24px;
-            padding: 15px 30px;
+            width: 100px;  /* New width */
+            height: 100px;  /* New height */
+            line-height: 100px;  /* New line height to align text vertically */
             border: 2px solid black;
-            border-radius: 10px;
+            border-radius: 50%;  /* Transition to round */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transform: scale(1.1);  /* Scale transform */
             outline: none;  /* Remove focus outline */
@@ -38,7 +44,7 @@
 <body>
 
     <!-- Button Element -->
-    <button class="my-button" tabindex="0">Click Me</button>
+    <button class="my-button" tabindex="0">Click</button>
 
 </body>
 </html>

@@ -6,20 +6,26 @@
   <style>
     /* Style for the dashboard container */
     .dashboard {
-      display: flex;
-      flex-wrap: wrap;
+      /* display: flex;
+      flex-wrap: wrap; */
       justify-content: center;
+      text-align: center;
+      display: grid;
+      /* grid-template-columns: 1fr 2fr 1fr; */
+      grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+      grid-template-rows: 100px 200px;
+      gap: 20px;
     }
 
     /* Style for each widget */
     .widget {
-      width: 150px;
-      height: 100px;
-      margin: 10px;
+      /* width: 150px; */
+      /* height: 100px; */
+      /* margin: 10px; */
       background-color: #f1f1f1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      /* display: flex; */
+      /* justify-content: center; */
+      /* align-items: center; */
       border: 1px solid #ccc;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);

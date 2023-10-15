@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button Transformation</title>
+    <style>
+        /* Initial button styling */
+        .my-button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.5s ease;  /* Transition */
+            transform: scale(1);  /* Initial scale */
+        }
+
+        /* Styles to apply when the button is focused */
+        .my-button:focus {
+            background-color: red;
+            color: yellow;
+            font-size: 24px;
+            padding: 15px 30px;
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);  /* Scale transform */
+            outline: none;  /* Remove focus outline */
+        }
+
+        /* Styles to apply when the button is clicked (active) */
+        .my-button:active {
+            transform: scale(0.9);  /* Scale transform */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button Element -->
+    <button class="my-button" tabindex="0">Click Me</button>
+
+</body>
+</html>

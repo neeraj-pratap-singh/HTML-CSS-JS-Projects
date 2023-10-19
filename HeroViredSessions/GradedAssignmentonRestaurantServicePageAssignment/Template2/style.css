@@ -1,0 +1,31 @@
+/* Add hover effect to icons */
+.icon-hover:hover {
+    color: green !important; /* Changed to green on hover */
+  }
+  
+  /* Increase the size of footer icons */
+  .footer-icon {
+    font-size: 36px; /* Increased font size */
+  }
+  
+  /* Add hover effect to header text */
+  .header-text:hover {
+    text-decoration: underline;
+    color: #ccc !important;
+  }
+  
+  /* To bring header text in the center of the header */
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* For the hero banner text */
+  .bg-image h1, .bg-image p {
+    text-align: center;
+    display: block; /* Added this to ensure they appear on different lines */
+  }
+  
+  /* Existing styles are kept as is */
+  

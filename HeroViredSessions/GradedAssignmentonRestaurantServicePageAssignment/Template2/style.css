@@ -1,58 +1,31 @@
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
-    color: white;
-    padding: 1em;
+/* Add hover effect to icons */
+.icon-hover:hover {
+    color: green !important; /* Changed to green on hover */
   }
   
-  #header-left, #header-middle, #header-right {
-    flex: 1;
+  /* Increase the size of footer icons */
+  .footer-icon {
+    font-size: 36px; /* Increased font size */
+  }
+  
+  /* Add hover effect to header text */
+  .header-text:hover {
+    text-decoration: underline;
+    color: #ccc !important;
+  }
+  
+  /* To bring header text in the center of the header */
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* For the hero banner text */
+  .bg-image h1, .bg-image p {
     text-align: center;
+    display: block; /* Added this to ensure they appear on different lines */
   }
   
-  #header-middle a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* Home Screen */
-  #hero-banner {
-    position: relative;
-  }
-  
-  #banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-  }
-  
-  #branch-cards {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .card {
-    border: 1px solid #ccc;
-    padding: 15px;
-    text-align: center;
-    width: 30%;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
+  /* Existing styles are kept as is */
   

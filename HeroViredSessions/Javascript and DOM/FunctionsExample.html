@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Operations</title>
+  </head>
+  <body>
+    <h1>Math Operations in JavaScript using Functions</h1>
+    <script>
+      // Function for addition
+      function add(a, b) {
+        return a + b;
+      }
+
+      // Function for subtraction
+      function subtract(a, b) {
+        return a - b;
+      }
+
+      // Function for multiplication
+      function multiply(a, b) {
+        return a * b;
+      }
+
+      // Function for division
+      function divide(a, b) {
+        if (b === 0) {
+          return "Cannot divide by zero";
+        }
+        return a / b;
+      }
+
+      // Calling the functions with dummy data
+      console.log("Addition: " + add(5, 3));       // Output should be 8
+      console.log("Subtraction: " + subtract(5, 3)); // Output should be 2
+      console.log("Multiplication: " + multiply(5, 3)); // Output should be 15
+      console.log("Division: " + divide(5, 3));     // Output should be approximately 1.6667
+      console.log("Division: " + divide(5, 0));     // Output should be "Cannot divide by zero"
+    </script>
+  </body>
+</html>

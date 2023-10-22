@@ -1,0 +1,135 @@
+<!-- Using normal variables
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js</title>
+  </head>
+  <body>
+    <p>My name is Neeraj</p>
+    <script>
+      console.log(" This is my first js");
+      var feedback1 = 5;
+      var name1 = "Neeraj";
+      var feedback2 = 3;
+      var name2 = "Sunita";
+      var feedback3 = 4;
+      var name3 = "Minakshi";
+      var feedback4 = 5;
+      var name4 = "Sohail";
+      var feedback5 = 2;
+      var name5 = "Ajay";
+      var average;
+    //   average = (feedback1 + feedback2 + feedback3 + feedback4 + feedback5) / 5;
+      if (feedback1 > 4) {
+        console.log(name1+" Has given Good feedback");
+      } else {
+        console.log(name1+" Has given Bad feedback");
+      }
+      if (feedback2 > 4) {
+        console.log(name2+" Has given Good feedback");
+      } else {
+        console.log(name2+" Has given Bad feedback");
+      }
+      if (feedback3 > 4) {
+        console.log(name3+" Has given Good feedback");
+      } else {
+        console.log(name3+" Has given Bad feedback");
+      }
+      if (feedback4 > 4) {
+        console.log(name4+" Has given Good feedback");
+      } else {
+        console.log(name4+" Has given Bad feedback");
+      }
+      if (feedback5 > 4) {
+        console.log(name5+" Has given Good feedback");
+      } else {
+        console.log(name5+" Has given Bad feedback");
+      }
+    </script>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js</title>
+  </head>
+  <body>
+    <p>My name is Neeraj</p>
+    <script>
+      console.log("This is my first js");
+
+      // Declare arrays to store names and feedbacks
+      const feedbacks = [5, 3, 4, 5, 2];
+      const names = ["Neeraj", "Sunita", "Minakshi", "Sohail", "Ajay"];
+      
+      // Initialize variable for average calculation
+      let average = 0;
+
+      // Loop through the feedbacks array
+      for (let i = 0; i < feedbacks.length; i++) {
+        average += feedbacks[i]; // Add each feedback to the average sum
+        // Check if feedback is greater than 4
+        if (feedbacks[i] > 4) {
+          console.log(names[i] + " Has given Good feedback");
+        } else {
+          console.log(names[i] + " Has given Bad feedback");
+        }
+      }
+
+      // Calculate the average feedback
+      average = average / feedbacks.length;
+      console.log("The average feedback is: " + average);
+    </script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js</title>
+  </head>
+  <body>
+    <p>My name is Neeraj</p>
+    <script>
+      console.log("This is my first js");
+
+      // Declare an array of objects to store names and feedbacks
+      const reviews = [
+        { name: "Neeraj", feedback: 5 },
+        { name: "Sunita", feedback: 3 },
+        { name: "Minakshi", feedback: 4 },
+        { name: "Sohail", feedback: 5 },
+        { name: "Ajay", feedback: 2 }
+      ];
+
+      // Initialize variable for average calculation
+      let average = 0;
+
+      // Loop through the reviews array
+      for (let i = 0; i < reviews.length; i++) {
+        const review = reviews[i];
+        average += review.feedback; // Add each feedback to the average sum
+
+        // Check if feedback is greater than 4
+        if (review.feedback > 4) {
+          console.log(review.name + " Has given Good feedback");
+        } else {
+          console.log(review.name + " Has given Bad feedback");
+        }
+      }
+
+      // Calculate the average feedback
+      average = average / reviews.length;
+      console.log("The average feedback is: " + average);
+    </script>
+  </body>
+</html>

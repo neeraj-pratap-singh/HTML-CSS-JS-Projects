@@ -30,6 +30,55 @@ function addProduct(productDetails) {
   return "Product added successfully!";
 }
 
+// Function to remove a product by index
+function removeProduct(index) {
+  // Check if the index is within the bounds of the array
+  if (index >= 0 && index < electronicsProducts.length) {
+    // Remove the product at the given index
+    electronicsProducts.splice(index, 1);
+    return "Product removed successfully!";
+  } else {
+    // Return an error message if the index is out of bounds
+    return "Index out of bounds. Please provide a valid index.";
+  }
+}
+
+// Function to remove products that are "Out of Stock"
+function removeOutOfStockProducts() {
+  // Loop backward through the array
+  for (let i = electronicsProducts.length - 1; i >= 0; i--) {
+    // Split the string into components to get the stock status
+    const details = electronicsProducts[i].split(" - ");
+    const stockStatus = details[3];
+
+    // Check if the product is "Out of Stock" and remove it
+    if (stockStatus === "Out of Stock") {
+      electronicsProducts.splice(i, 1);
+    }
+  }
+  return "Out of Stock products removed successfully!";
+}
+
+// Function to calculate the total price of products in a specific category
+function calculateTotalPriceByCategory(category) {
+  let totalPrice = 0;
+
+  // Loop through the array
+  for (let i = 0; i < electronicsProducts.length; i++) {
+    // Split the string into components to get the details
+    const details = electronicsProducts[i].split(" - ");
+    const productCategory = details[2];
+    const price = parseFloat(details[1]);
+
+    // Add the price to the total if the product is in the target category
+    if (productCategory === category) {
+      totalPrice += price;
+    }
+  }
+
+  return `Total price of products in category ${category}: $${totalPrice}`;
+}
+
 // Example usage for getProductDetails
 const details = getProductDetails(2);  // Should return details for Sony WH-1000XM4
 console.log(details);
@@ -37,6 +86,15 @@ console.log(details);
 // Example usage for addProduct
 const addResult = addProduct("Apple Watch - 399 - Wearables - In Stock");  // Should add a new product to the array
 console.log(addResult);
+
+// Example usage for removeProduct
+const removeResult = removeProduct(4);  // Should remove the product at index 4 (Dell XPS 13) from the array
+console.log(removeResult);
+
+// Example usage for removeOutOfStockProducts
+const removeOutOfStockResult = removeOutOfStockProducts();  // Should remove all products that are "Out of Stock"
+console.log(removeOutOfStockResult);
+
 
 // Optional: To see the updated array
 console.log(electronicsProducts);

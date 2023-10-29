@@ -79,6 +79,44 @@ function calculateTotalPriceByCategory(category) {
   return `Total price of products in category ${category}: $${totalPrice}`;
 }
 
+// Function to sort the products by price
+function sortProductsByPrice() {
+  electronicsProducts.sort((a, b) => {
+    const priceA = parseFloat(a.split(' - ')[1]);
+    const priceB = parseFloat(b.split(' - ')[1]);
+    return priceA - priceB;
+  });
+  return "Products sorted by price successfully!";
+}
+
+// Function to generate a report summarizing product information
+function generateProductReport() {
+  const categoryCounts = {};
+
+  // Loop through the array
+  for (let i = 0; i < electronicsProducts.length; i++) {
+    // Split the string into components to get the category
+    const details = electronicsProducts[i].split(" - ");
+    const category = details[2];
+
+    // Increment the count for this category
+    if (categoryCounts.hasOwnProperty(category)) {
+      categoryCounts[category]++;
+    } else {
+      categoryCounts[category] = 1;
+    }
+  }
+
+  // Generate the report
+  let report = "Product Report:\n";
+  for (const [category, count] of Object.entries(categoryCounts)) {
+    report += `${category}: ${count} products\n`;
+  }
+
+  return report;
+}
+
+
 // Example usage for getProductDetails
 const details = getProductDetails(2);  // Should return details for Sony WH-1000XM4
 console.log(details);
@@ -95,6 +133,13 @@ console.log(removeResult);
 const removeOutOfStockResult = removeOutOfStockProducts();  // Should remove all products that are "Out of Stock"
 console.log(removeOutOfStockResult);
 
+// Example usage for sortProductsByPrice
+const sortResult = sortProductsByPrice();  // Should sort the products by price
+console.log(sortResult);
+
+// Example usage for generateProductReport
+const report = generateProductReport();  // Should generate a summary report
+console.log(report);
 
 // Optional: To see the updated array
 console.log(electronicsProducts);

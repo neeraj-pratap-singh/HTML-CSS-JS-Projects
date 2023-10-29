@@ -178,6 +178,13 @@ function filterInStockProducts() {
   });
 }
 
+// Function to display only the names of the products
+function displayProductNames() {
+  // Use map to create a new array containing only the product names
+  const productNames = electronicsProducts.map(product => product.split(' - ')[0]);
+  return productNames;
+}
+
 
 // Example usage for getProductDetails
 const details = getProductDetails(2);  // Should return details for Sony WH-1000XM4
@@ -220,6 +227,11 @@ console.log(totalValue);
 // Filter in-stock products
 const inStockProducts = filterInStockProducts();
 console.log("In-stock products:", inStockProducts);
+
+// Example usage for displayProductNames
+const productNamesList = displayProductNames();
+console.log('List of Product Names:', productNamesList);
+
 
 // Optional: To see the updated array
 console.log(electronicsProducts);

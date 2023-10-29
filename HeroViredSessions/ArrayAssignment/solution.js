@@ -1,5 +1,5 @@
 // Define an array to store electronics product information
-const electronicsProducts = [
+let electronicsProducts = [
   "iPhone 13 Pro - 999 - Smartphones - In Stock",
   "Samsung Galaxy S21 - 799 - Smartphones - In Stock",
   "Sony WH-1000XM4 - 278 - Headphones - Out of Stock",
@@ -116,6 +116,68 @@ function generateProductReport() {
   return report;
 }
 
+// Function to convert product prices to Indian Rupee (INR) using map
+function convertPricesToINRWithMap() {
+  // Conversion rate from USD to INR
+  const conversionRate = 75;
+
+  // Use map to create a new array with updated prices
+  const convertedProducts = electronicsProducts.map(product => {
+    // Split the string into components to get the details
+    const details = product.split(" - ");
+    const usdPrice = parseFloat(details[1]);
+
+    // Convert the price to INR
+    const inrPrice = (usdPrice * conversionRate).toFixed(2);
+
+    // Return the updated product details
+    return `${details[0]} - ${inrPrice} - ${details[2]} - ${details[3]}`;
+  });
+
+  // Update the original array with the new one
+  electronicsProducts.splice(0, electronicsProducts.length, ...convertedProducts);
+
+  return "Product prices converted to INR successfully!";
+}
+
+// Adding quantity to existing products in the electronicsProducts array
+electronicsProducts = electronicsProducts.map(product => `${product} - 0`);  // Initially, set quantity as 0 for each product
+
+// Function to update the quantity of a product in the cart
+function updateQuantity(productName, quantity) {
+  const index = electronicsProducts.findIndex(product => product.startsWith(productName));
+  if (index !== -1) {
+    const details = electronicsProducts[index].split(" - ");
+    details[4] = quantity;  // Update the quantity
+    electronicsProducts[index] = details.join(" - ");
+  }
+}
+
+// Function to calculate the total cart value
+function calculateTotalCartValue() {
+  let totalValue = 0;
+
+  for (const product of electronicsProducts) {
+    const details = product.split(" - ");
+    const price = parseFloat(details[1]);
+    const quantity = parseInt(details[4], 10);  // Get the quantity
+    if(quantity){
+      totalValue += price * quantity;
+    }
+  }
+
+  return `Total cart value: Rs. ${totalValue.toFixed(2)}`;
+}
+
+// Function to filter out-of-stock products
+function filterInStockProducts() {
+  return electronicsProducts.filter(product => {
+    const details = product.split(" - ");
+    const quantity = parseInt(details[4], 10);  // Get the quantity
+    return quantity > 0;  // Return true if the product is in stock
+  });
+}
+
 
 // Example usage for getProductDetails
 const details = getProductDetails(2);  // Should return details for Sony WH-1000XM4
@@ -140,6 +202,24 @@ console.log(sortResult);
 // Example usage for generateProductReport
 const report = generateProductReport();  // Should generate a summary report
 console.log(report);
+
+// Example usage for convertPricesToINRWithMap
+const conversionResultINR = convertPricesToINRWithMap();  // Should convert all product prices to INR
+console.log(conversionResultINR);
+
+// Update quantities for some products
+updateQuantity("iPhone 13 Pro", 1);
+updateQuantity("Apple MacBook Pro", 1);
+updateQuantity("Amazon Echo Dot", 2);
+updateQuantity("Samsung Galaxy S21", 0);  // Out of stock
+
+// Calculate the total cart value
+const totalValue = calculateTotalCartValue();
+console.log(totalValue);
+
+// Filter in-stock products
+const inStockProducts = filterInStockProducts();
+console.log("In-stock products:", inStockProducts);
 
 // Optional: To see the updated array
 console.log(electronicsProducts);

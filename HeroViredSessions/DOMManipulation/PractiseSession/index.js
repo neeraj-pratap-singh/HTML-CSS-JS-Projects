@@ -28,3 +28,23 @@ mydiv.addEventListener("click", function () {
   updateInnerDiv();
   createButton(); // Create the button when div is clicked
 });
+
+// Subject selection logic
+document.querySelectorAll('input[name="subject"]').forEach(input => {
+    input.addEventListener('change', () => {
+        const selectedSubjects = Array.from(document.querySelectorAll('input[name="subject"]:checked')).map(el => el.value);
+        if (selectedSubjects.length > 4) {
+            alert('You can only select 4 subjects');
+            input.checked = false;
+        } else {
+            console.log('Selected Subjects:', selectedSubjects);
+        }
+    });
+});
+
+// Gender selection logic
+document.querySelectorAll('input[name="gender"]').forEach(input => {
+    input.addEventListener('change', () => {
+        console.log('Selected Gender:', input.value);
+    });
+});

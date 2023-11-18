@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .hover-div {
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for color and shadow */
+        }
+
+        .hover-div:hover {
+            background-color: green;
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+        }
+    </style>
 </head>
 <body>
     <div class="sample" style="background-color: lightblue;">sample1</div>
+    <div class="hover-div"> Hover Div</div>
     <script src="./index.js"></script>
 </body>
 </html>

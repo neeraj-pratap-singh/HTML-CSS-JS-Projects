@@ -1,0 +1,15 @@
+#redBox {
+    background-color: red;
+    padding: 20px;
+    margin: 20px;
+}
+
+#greenBox {
+    background-color: green;
+    padding: 20px;
+    margin: 20px;
+}
+
+#inputText {
+    margin-right: 10px;
+}

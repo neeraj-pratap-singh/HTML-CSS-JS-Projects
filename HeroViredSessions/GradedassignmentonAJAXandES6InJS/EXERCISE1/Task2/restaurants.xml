@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurants>
+    <restaurant name="yellow chilli" address="New Delhi" lat="47.608940" lng="-122.340141" type="sitdown"/>
+    <restaurant name="blue ocean" address="Mumbai" lat="19.0760" lng="72.8777" type="takeaway"/>
+    <restaurant name="green apple" address="Bangalore" lat="12.9716" lng="77.5946" type="cafe"/>
+    <restaurant name="red tomato" address="Chennai" lat="13.0827" lng="80.2707" type="fine dining"/>
+    <restaurant name="purple basil" address="Kolkata" lat="22.5726" lng="88.3639" type="casual dining"/>
+    <restaurant name="orange peel" address="Jaipur" lat="26.9124" lng="75.7873" type="pub"/>
+    <!-- Additional restaurant entries can be added here -->
+</restaurants>

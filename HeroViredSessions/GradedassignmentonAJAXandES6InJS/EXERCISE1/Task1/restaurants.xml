@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurants>
+    <restaurant>
+        <name>Restaurant A</name>
+        <cuisine>Italian</cuisine>
+        <rating>4.5</rating>
+    </restaurant>
+    <restaurant>
+        <name>Restaurant B</name>
+        <cuisine>Chinese</cuisine>
+        <rating>4.0</rating>
+    </restaurant>
+</restaurants>

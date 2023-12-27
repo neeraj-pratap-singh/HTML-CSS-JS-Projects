@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurants>
+    <restaurant name="Yellow Chilli" address="123 Spice Lane, New Delhi" type="sit down"/>
+    <restaurant name="Blue Ocean" address="47 Sea View Blvd, Mumbai" type="bar"/>
+    <restaurant name="Green Apple Cafe" address="88 Orchard Rd, Bangalore" type="sit down"/>
+    <restaurant name="Red Tomato" address="5 Tomato St, Chennai" type="sit down"/>
+    <restaurant name="Purple Basil" address="202 Herb Way, Kolkata" type="bar"/>
+    <restaurant name="Orange Peel" address="33 Citrus Ave, Jaipur" type="sit down"/>
+    <!-- Additional restaurant entries can be added here -->
+</restaurants>

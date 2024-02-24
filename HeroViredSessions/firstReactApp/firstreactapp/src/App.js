@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import BookDetails from './components/BookDetails';
 
@@ -16,10 +17,19 @@ const booksData = [
 ];
 
 function App() {
+
+  // State variable for the counter
+  const [count, setCount] = useState(0);
+
   return (
     <div className="App">
-      <h1>Books details</h1>
-      <BookDetails books={booksData} />
+      {/* <h1>Books Details</h1>
+      <BookDetails books={booksData} /> */}
+      <div className="counter">
+        <button onClick={() => setCount(count - 1)}>-</button>
+        <span>{count}</span>
+        <button onClick={() => setCount(count + 1)}>+</button>
+      </div>
     </div>
   );
 }
